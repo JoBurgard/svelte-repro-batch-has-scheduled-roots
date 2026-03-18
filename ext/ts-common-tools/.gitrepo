@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:JoBurgard/ts-common-tools.git
+	branch = v1
+	commit = d0a517bf746a5a549ab026e6dc30b0716abb0b90
+	parent = 49514789561243d6d2fd61bfa0388baf3347d450
+	method = merge
+	cmdver = 0.4.9

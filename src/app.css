@@ -1,0 +1,118 @@
+@import 'tailwindcss' source(none);
+@source './**/*';
+@source '../ext/ts-common-tools/**/*';
+@source '../bundle/**/*';
+
+@plugin '@iconify/tailwind4' {
+	prefix: 'i';
+}
+@plugin 'daisyui' {
+	logs: false;
+}
+
+@plugin 'daisyui/theme' {
+	name: 'dark';
+	default: false;
+	prefersdark: true;
+	color-scheme: 'dark';
+	--color-base-100: oklch(24.1% 0.043 264.7);
+	--color-base-200: oklch(17.3% 0.043 253.1);
+	--color-base-300: oklch(14.1% 0.043 253.1);
+	--color-base-content: oklch(97.807% 0.029 256.847);
+	--color-primary: oklch(56% 0.195 41.51);
+	--color-primary-content: oklch(96% 0.018 272.314);
+	--color-secondary: oklch(42% 0.199 265.638);
+	--color-secondary-content: oklch(94% 0.028 342.258);
+	--color-accent: oklch(69.2% 0.169 41.6);
+	--color-accent-content: oklch(12.2% 0.363 41.6);
+	--color-neutral: oklch(10.8% 0.084 265.5);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(62.6% 0.161 254.624);
+	--color-info-content: oklch(28% 0.091 267.935);
+	--color-success: oklch(69.9% 0.199 130.85);
+	--color-success-content: oklch(27% 0.072 132.109);
+	--color-warning: oklch(76% 0.188 70.08);
+	--color-warning-content: oklch(27% 0.077 45.635);
+	--color-error: oklch(64.2% 0.221 25.331);
+	--color-error-content: oklch(25% 0.092 26.042);
+	--radius-selector: 0.5rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.5rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 1;
+	--noise: 0;
+}
+
+@theme {
+	--animate-shake: shake 0.5s ease-out;
+	@keyframes shake {
+		10%,
+		90% {
+			transform: translate3d(-1px, 0, 0);
+		}
+		20%,
+		80% {
+			transform: translate3d(2px, 0, 0);
+		}
+		30%,
+		50%,
+		70% {
+			transform: translate3d(-4px, 0, 0);
+		}
+		40%,
+		60% {
+			transform: translate3d(4px, 0, 0);
+		}
+	}
+}
+
+@utility section-gradient-1 {
+	background: linear-gradient(
+		to right,
+		color-mix(in oklab, var(--color-primary) 70%, transparent),
+		color-mix(in oklab, var(--color-primary) 0%, transparent)
+	);
+	height: 1px;
+}
+
+@utility section-gradient-2 {
+	background: linear-gradient(
+		to right,
+		color-mix(in oklab, var(--color-secondary) 70%, transparent),
+		color-mix(in oklab, var(--color-secondary) 0%, transparent)
+	);
+	height: 1px;
+}
+
+@utility section-gradient-3 {
+	background: linear-gradient(
+		to right,
+		color-mix(in oklab, var(--color-tertiary) 70%, transparent),
+		color-mix(in oklab, var(--color-tertiary) 0%, transparent)
+	);
+	height: 1px;
+}
+
+@utility section-gradient-4 {
+	background: linear-gradient(
+		to right,
+		color-mix(in oklab, var(--color-base-content) 70%, transparent),
+		color-mix(in oklab, var(--color-base-content) 0%, transparent)
+	);
+	height: 1px;
+}
+
+.grid-stack {
+	display: grid;
+	place-content: center;
+
+	> * {
+		grid-area: 1 / 1;
+	}
+}
+
+.divider {
+	flex-shrink: 0;
+}
